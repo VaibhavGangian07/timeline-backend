@@ -1,0 +1,16 @@
+#file: noinspection SpellCheckingInspection
+spring:
+  datasource:
+    url: jdbc:postgresql://db.eogowsslgfqfpxyfemby.supabase.co:5432/postgres
+    username: postgres
+    password: LionelMessi672
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+    properties:
+      hibernate:
+        format_sql: true
+
+    show-sql: true
