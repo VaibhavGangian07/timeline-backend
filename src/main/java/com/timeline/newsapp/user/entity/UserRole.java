@@ -1,4 +1,6 @@
 package com.timeline.newsapp.user.entity;
 
-public class User {
+public enum UserRole {
+    USER,
+    ADMIN
 }
