@@ -5,6 +5,8 @@ import com.timeline.newsapp.common.entity.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -14,7 +16,7 @@ import lombok.*;
 @Table(name = "articles")
 public class Article  extends BaseEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -43,6 +45,6 @@ public class Article  extends BaseEntity {
     private ArticleStatus status;
 
     @Column(name = "published_at")
-    private String publishedAt;
+    private LocalDateTime publishedAt;
 
 }
